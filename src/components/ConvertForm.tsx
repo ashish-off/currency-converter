@@ -1,6 +1,8 @@
 import React from 'react'
+import CurrencySelect from './CurrencySelect'
 
-const CurrencyConverter = () => {
+
+const ConvertForm = () => {
   return (
     <form className="mt-11">
     <div className="flex flex-col mb-[30px]">
@@ -19,29 +21,7 @@ const CurrencyConverter = () => {
         <div className="form-section">
           <label className="text-white">Form</label>
 
-          <div className="flex px-[10px] min-h-[45px] items-center rounded-[6px] bg-white/10 border border-white/50">
-            <img
-              className=" w-6"
-              src="https://flagsapi.com/US/flat/64.png"
-              alt="flag"
-            />
-
-            <select className="outline-none border-none bg-transparent text-white text-base font-medium px-2.5 pl-1.5">
-              <option
-                className="text-black font-medium"
-                value="USD"
-                selected
-              >
-                USD
-              </option>
-              <option className="text-black font-medium" value="USD">
-                NPR
-              </option>
-              <option className="text-black font-medium" value="USD">
-                INR
-              </option>
-            </select>
-          </div>
+          <CurrencySelect />
         </div>
 
         <div className="h-10 w-10 cursor-pointer flex mt-6 items-center justify-center rounded-full bg-white/10 border border-white/50 transition duration-200 ease-in-out hover:bg-white/30">
@@ -59,29 +39,7 @@ const CurrencyConverter = () => {
 
         <div className="form-section">
           <label className="text-white">To</label>
-          <div className="flex px-[10px] min-h-[45px] items-center rounded-[6px] bg-white/10 border border-white/50">
-            <img
-              className="w-6"
-              src="https://flagsapi.com/IN/flat/64.png"
-              alt="flag"
-            />
-
-            <select className="text-[1rem] outline-none border-none bg-transparent text-white text-base font-medium px-2.5 pl-1.5">
-              <option className="text-black font-medium" value="USD">
-                USD
-              </option>
-              <option className="text-black font-medium" value="USD">
-                NPR
-              </option>
-              <option
-                className="text-black font-medium"
-                value="USD"
-                selected
-              >
-                INR
-              </option>
-            </select>
-          </div>
+          <CurrencySelect />
         </div>
       </div>
       <div>
@@ -102,4 +60,4 @@ const CurrencyConverter = () => {
   )
 }
 
-export default CurrencyConverter
+export default ConvertForm

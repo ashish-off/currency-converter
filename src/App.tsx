@@ -1,5 +1,5 @@
 import React from "react";
-import CurrencyConverter from "./components/CurrencyConverter";
+import ConvertForm from "./components/ConvertForm";
 
 const App = () => {
   return (
@@ -10,8 +10,8 @@ const App = () => {
             Currency Converter
           </h2>
 
-          <CurrencyConverter />
-          
+          <ConvertForm />
+
         </div>
       </div>
     </>
