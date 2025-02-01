@@ -109,7 +109,7 @@ const ConvertForm = () => {
             Get Exchange Rate
           </button>
 
-          <p className="text-white text-xl font-semibold text-center py-6 rounded-md tracking-wide bg-white/15 h-18 ">
+          <p className={`  ${isLoading ? "opacity-80" : "opacity-100"}  text-white text-xl font-semibold text-center py-6 rounded-md tracking-wide bg-white/10 h-18 `}>
             {isLoading ? "Loading..." : result } 
           </p>
         </div>
