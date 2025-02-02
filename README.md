@@ -1,50 +1,75 @@
-# React + TypeScript + Vite
+# Currency Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple currency converter application built with React and TypeScript that allows users to convert amounts between different currencies using real-time exchange rates from the ExchangeRate API.
 
-Currently, two official plugins are available:
+## Features
+- Convert currency amounts between different currencies.
+- Fetch real-time exchange rates from ExchangeRate API.
+- Swap between "From" and "To" currencies easily.
+- Displays country flags for selected currencies.
+- User-friendly interface with smooth interactions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- React
+- TypeScript
+- ExchangeRate API
+- Tailwind CSS
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/ashish-off/currency-converter.git
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+2. Navigate to the project folder:
+   ```sh
+   cd currency-converter
+   ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+
+4. Create a `.env` file in the root directory and add your API key:
+   ```sh
+   VITE_API_KEY=your_api_key_here
+   ```
+
+5. Start the development server:
+   ```sh
+   npm run dev
+   ```
+
+## Usage
+- Enter the amount you want to convert.
+- Select the "From" and "To" currencies from the dropdown menus.
+- Click on the "Get Exchange Rate" button to fetch the conversion rate.
+- Click the swap button to interchange the selected currencies.
+
+## Folder Structure
+```
+📂 currency-converter
+├── 📁 src
+│   ├── 📁 components
+│   │   ├── ConvertForm.tsx
+│   │   ├── CurrencySelect.tsx
+│   ├── 📁 data
+│   │   ├── data.ts
+│   ├── App.tsx
+│   ├── main.tsx
+├── .env
+├── package.json
+├── README.md
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## API Information
+This project uses the [ExchangeRate API](https://www.exchangerate-api.com/) to fetch real-time exchange rates. Make sure to obtain an API key and set it in the `.env` file as `VITE_API_KEY`.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## License
+This project is open-source and available under the [MIT License](LICENSE).
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Author
+[Ashish Saud](https://github.com/ashish-off)
+
