@@ -73,3 +73,6 @@ This project is open-source and available under the [MIT License](LICENSE).
 ## Author
 [Ashish Saud](https://github.com/ashish-off)
 
+## Demo
+
+![Image](https://github.com/user-attachments/assets/10026c60-e063-4409-af50-83ac924e01b8)
